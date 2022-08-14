@@ -1,0 +1,11 @@
+version: '3'
+services:
+  atomic-basics.local:
+    container_name: atomic-basics.local
+    image: queirozjamessom/atomic-basics.local:latest
+    build: .
+    command: npm run dev
+    ports: ["8081:8081"]
+    volumes:
+      - .:/home/app
+      - ./node_modules:/home/app/node_modules
